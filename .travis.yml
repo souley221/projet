@@ -5,7 +5,8 @@ deploy:
   provider: heroku
   api_key:
     secure: J1UzsvbliNanl9O8TUyjCwRE7OGNbUe4O5/A1Zi6ZgeuRzGAR+R42YRPVIuCmWxaqyqCG+s/fp3wH828z/fPjMthQQX+UpL1/JBrKiJJGXZYu6GeCKH4EAtHcRH92HLwhBYhTn4mFcLWW7ea6w37lcB/Uvl9aMoHwF84PdKyyaM/EzF0OrCeaWj56uCaXIXrMd55Qe8dVmlEiehTe42HVh9SUSevMrqvrhIYcHwqm2+cPrbSo6Ua3XneMkxdwFnHKkiSbaBj8lyqgJDysQfJ63R6h3DU7nOvht9PM3yl2GCbL40MiRkYS4PTSoJyUUOkPOKn9cKIjhL3i9tQzWkQxmc9CX0uG7pGiyl5+yNDoyxbI2YwFlHcbg8p2/Sikm0VyU292FoYgPJPH8l0c4EdFx1zRwChfYoELIOV3+OvS9JRIxijvli4PaIfCu4yyHTKAnR3BHLeSmhyjYdNg7yJQrzVeWvqM14ye7mZ18LB7nqtyklkGmH3qhQ7EudCFonImrHcjRZ8nsXTr8f7G0JztVOMyy4DEQ6Kcds1XwYWSv5U3HKAAzlGTkyjrXFguEg8LKshnB3FAzDV8P4Z2SdWUKCW014qlL4L5s0c6q8Y0xZhsZnLgeKDxz227fk14eK6wu85mzufEDA4NGe2ShYSiTOUmfYbb+4S0G9NobmC4D0=
-    run: "rake db:migrate"
-    app: whispering-hamlet-75434
-    on:
+  run: "rake db:migrate"
+  app: whispering-hamlet-75434
+  on:
     repo: souley221/projet
+    
