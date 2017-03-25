@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @ville.nom %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @ville.string %>
+</p>
+
+<p>
+  <strong>Lattitude:</strong>
+  <%= @ville.lattitude %>
+</p>
+
+<p>
+  <strong>Float:</strong>
+  <%= @ville.float %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @ville.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_ville_path(@ville) %> |
+<%= link_to 'Back', villes_path %>

@@ -39,3 +39,10 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+#API
+gem 'nominatim', '~>0.0.6'  
+
+
+#VCR   
+gem 'vcr', '~> 3.0', '>= 3.0.3', group: :test
+

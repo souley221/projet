@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :cities
+
   resources :students
   root  to: 'students#index'
 
