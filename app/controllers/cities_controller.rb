@@ -13,7 +13,7 @@ class CitiesController < ApplicationController
   end
 
   def show 
-    forecast = ForecastIO.forecast(@city.lattitudeitude, @city.longitude)
+    forecast = ForecastIO.forecast(@city.lattitude, @city.longitude)
     
     weatherFetched = false
     temperatureFetched = false
