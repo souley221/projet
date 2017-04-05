@@ -38,9 +38,6 @@ class CitiesController < ApplicationController
     if !temperatureFetched
       @weatherTemperature = nil
     end
-    
-    @temperatureColor = getColorTemperature(@weatherTemperature)
-    
 end
   # GET /cities/new
   def new
