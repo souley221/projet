@@ -4,10 +4,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3',        group: :development 
-gem 'pg',           group: :production
+gem 'sqlite3',        group: :development
+gem 'pg',        group: :production 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 5.0', '>= 5.0.4'
+
+gem 'bootstrap', '~> 4.0.0.alpha6'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -39,12 +41,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-#API
-gem 'nominatim', '~>0.0.6'  
+gem 'nominatim', '~> 0.0.5'
 
-
-#VCR   
-gem 'vcr', '~> 3.0', '>= 3.0.3', group: :test
+gem 'vcr', '~> 3.0', '>= 3.0.3'
 
 gem 'forecast_io', '~> 2.0', '>= 2.0.1'
-

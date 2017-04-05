@@ -12,6 +12,36 @@ class CitiesController < ApplicationController
   def show
   end
 
+  def show 
+    forecast = ForecastIO.forecast(@town.latitude, @town.longitud)
+    
+    weatherFetched = false
+    temperatureFetched = false
+    if forecast
+      todayForecast = forecast.currently
+      if todayForecast
+        if todayForecast.icon
+          @weatherIconName = todayForecast.icon
+          weatherFetched = true
+        end
+        if todayForecast.temperature
+          @weatherTemperature = toCelsus(todayForecast.temperature)
+          temperatureFetched = true
+        end
+      end
+    end
+    
+    if !weatherFetched
+      @weatherIconName = nil
+    end
+    
+    if !temperatureFetched
+      @weatherTemperature = nil
+    end
+    
+    @temperatureColor = getColorTemperature(@weatherTemperature)
+    
+end
   # GET /cities/new
   def new
     @city = City.new
