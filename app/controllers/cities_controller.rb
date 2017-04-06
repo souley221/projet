@@ -98,7 +98,6 @@ end
     def city_params
       params.require(:city).permit(:name, :lattitude, :longitude)
     end
-end
 def toCelsus(fahrenheitTemperature)
       if fahrenheitTemperature
         return (fahrenheitTemperature - 32.0) * 5.0 / 9.0
