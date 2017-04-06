@@ -20,9 +20,13 @@
 
 
 <p>
-  <strong>Météo:</strong>
-  <%= '%.2f' % @weatherTemperature %> &deg;C , <%= @weatherSummary %> 
+  <strong>Current temperature :</strong>
+  <% if @weatherTemperature %>
+      <%= '%.2f' % @weatherTemperature %> &deg;C
+  <% else %>
+    Unavailable
+  <% end %>
 </p>
 
-<%= link_to 'Edit', edit_city_path(@city) %> |
-<%= link_to 'Back', cities_path %>
+<%= link_to 'Edit', edit_town_path(@town) %> |
+<%= link_to 'Back', towns_path %>
