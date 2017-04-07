@@ -17,7 +17,7 @@ class CitiesController < ApplicationController
     forecast = ForecastIO.forecast(@city.lattitude, @city.longitude)
     weatherOk = false
     temperatureOk = false
-    i=0
+    i = 0
     if forecast
       i=i+1
       todayForecast = forecast.currently
