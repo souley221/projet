@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <strong>Lattitude:</strong>
+  <strong>Latitude:</strong>
   <%= @city.lattitude %>
 </p>
 
@@ -16,12 +16,8 @@
 </p>
 
 <p>
-  <strong>Current temperature :</strong>
-  <% if @weatherTemperature %>
-      <%= '%.2f' % @weatherTemperature %> &deg;C
-  <% else %>
-    Unavailable
-  <% end %>
+  <strong>Météo:</strong>
+  <%= '%.2f' % @weatherTemperature %> &deg;C , <%= @weatherSummary %> 
 </p>
 
 <%= link_to 'Edit', edit_city_path(@city) %> |
