@@ -1,3 +1,4 @@
+require 'forecast_io'
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :edit, :update, :destroy]
 
