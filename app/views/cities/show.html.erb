@@ -19,6 +19,9 @@
   <strong>Météo:</strong>
   <%= '%.2f' % @weatherTemperature %> &deg;C , <%= @weatherSummary %> 
 </p>
+<p>
+  <%=@test_val%>
+</p>
 
 <%= link_to 'Edit', edit_city_path(@city) %> |
 <%= link_to 'Back', cities_path %>

@@ -17,15 +17,20 @@ class CitiesController < ApplicationController
     forecast = ForecastIO.forecast(@city.lattitude, @city.longitude)
     weatherOk = false
     temperatureOk = false
+    test_val="avant de rentrer dans forecast"
     if forecast
+      test_val="Dans forecast"
       todayForecast = forecast.currently
       if todayForecast
+        test_val = "Dans todayForecast"
         if todayForecast.summary
           @weatherSummary = todayForecast.summary
           weatherOk = true
         end
         if todayForecast.temperature
-          @weatherTemperature = toCelsus(todayForecast.temperature)
+          test_val="Dans todayforecastTemperature"
+          @weather_io = toCelsus(todayForecast.temperature)
+          @weatherTemperature = weather_io.round(2);
           temperatureOk = true
         end
       end
