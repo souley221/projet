@@ -1,7 +1,8 @@
 require 'forecast_io'
+
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /cities
   # GET /cities.json
   def index
@@ -22,9 +23,7 @@ class CitiesController < ApplicationController
           weatherOk = true
         end
         if todayForecast.temperature
-    
-          @weather_io = toCelsus(todayForecast.temperature)
-          @weatherTemperature = weather_io.round(2);
+          @weatherTemperature = toCelsus(todayForecast.temperature)
           temperatureOk = true
         end
       end
@@ -35,7 +34,8 @@ class CitiesController < ApplicationController
     if !temperatureOk
       @weatherTemperature = 0
     end
-end
+  end
+
   # GET /cities/new
   def new
     @city = City.new
@@ -93,9 +93,10 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def city_params
-      params.require(:city).permit(:name, :lattitude, :longitude)
+      params.require(:city).permit(:name, :latitude, :longitude)
     end
-def toCelsus(fahrenheitTemperature)
+  
+    def toCelsus(fahrenheitTemperature)
       if fahrenheitTemperature
         return (fahrenheitTemperature - 32.0) * 5.0 / 9.0
       else
