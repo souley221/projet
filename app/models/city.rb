@@ -3,11 +3,8 @@ class City < ActiveRecord::Base
   
   public
   def meteo
-    
     ForecastIO.forecast(self.lattitude, self.longitude).currently.summary
   end
-  
-  
   private  
   def geocode
     places = Nominatim.search(self.name).limit(1)
